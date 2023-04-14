@@ -1,0 +1,53 @@
+                        +--------------+
+                        |     User     |
+                        +--------------+
+                        | PK: user_id  |
+                        |   username   |
+                        |   password   |
+                        |   email      |
+                        |   ...        |
+                        +--------------+
+
+                        +--------------+
+                        |     Role     |
+                        +--------------+
+                        | PK: role_id  |
+                        |   role_name  |
+                        |   ...        |
+                        +--------------+
+
+                         +--------------+
+                         |   Assessment  |
+                         +--------------+
+                         | PK: assess_id |
+                         |  assess_name |
+                         |   ...        |
+                         +--------------+
+
+                         +--------------+
+                         |  Question    |
+                         +--------------+
+                         | PK: question_id|
+                         |   question_text |
+                         |  assess_id (FK) |
+                         |   ...          |
+                         +--------------+
+
+                         +--------------+
+                         |  Option      |
+                         +--------------+
+                         | PK: option_id |
+                         |   option_text |
+                         |   question_id (FK)|
+                         |   ...         |
+                         +--------------+
+
+                         +--------------+
+                         |  Answer       |
+                         +--------------+
+                         | PK: answer_id |
+                         |  user_id (FK) |
+                         |  question_id (FK) |
+                         |  option_id (FK) |
+                         |  ...          |
+                         +--------------+
